@@ -65,7 +65,7 @@ function setSignature(html, event) {
 
 function buildSignatureHtml(user) {
     // HIER BITTE DIE BILD-URLS AUS EURER WORDPRESS-MEDIATHEK EINTRAGEN:
-    const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/DEIN-LOGO.png";
+    const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/vfag_logo.png";
     const fbIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-facebook.png";
     const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-xing.png";
     const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-youtube.png";
@@ -95,20 +95,20 @@ function buildSignatureHtml(user) {
 
         <!-- Firmenlogo (Wichtig: Mit hellem Hintergrund speichern, damit es im Dark Mode gut lesbar ist!) -->
         <p style="margin: 10px 0;">
-            <a href="https://www.finanzkaufleute.de" target="_blank" style="text-decoration: none;">
+            <a href="https://www.finanzkaufleute.de" target="https://www.finanzkaufleute.de" style="text-decoration: none;">
                 <img src="${logoUrl}" alt="Vereinigte Finanzkaufleute in Deutschland AG" style="max-width: 260px; height: auto; border: 0; display: block;" />
             </a>
         </p>
 
         <!-- Social Media Icons -->
         <p style="margin: 10px 0 16px 0;">
-            <a href="https://www.facebook.com" target="_blank" style="text-decoration: none; margin-right: 6px;">
+            <a href="https://www.facebook.com" target="https://www.facebook.com/vereinigtefinanzkaufleute" style="text-decoration: none; margin-right: 6px;">
                 <img src="${fbIconUrl}" alt="Facebook" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
-            <a href="https://www.xing.com" target="_blank" style="text-decoration: none; margin-right: 6px;">
+            <a href="https://www.xing.com" target="https://www.xing.com/pages/vereinigtefinanzkaufleuteindeutschlandag" style="text-decoration: none; margin-right: 6px;">
                 <img src="${xingIconUrl}" alt="Xing" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
-            <a href="https://www.youtube.com" target="_blank" style="text-decoration: none;">
+            <a href="https://www.youtube.com" target="https://www.youtube.com/user/Finanzkaufleute" style="text-decoration: none;">
                 <img src="${ytIconUrl}" alt="YouTube" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
         </p>
