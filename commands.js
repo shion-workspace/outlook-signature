@@ -66,9 +66,10 @@ function setSignature(html, event) {
 function buildSignatureHtml(user) {
     // HIER BITTE DIE BILD-URLS AUS EURER WORDPRESS-MEDIATHEK EINTRAGEN:
     const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/vfag_logo.png";
-    const fbIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-facebook.png";
-    const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-xing.png";
-    const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/icon-youtube.png";
+    const fbIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/facebook.png";
+    const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/xing.png";
+    const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/youtube.png";
+    const igIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2026/11/instagram-e1795691716909.jpg"
 
     // Optionaler persönlicher Block (erscheint nur, wenn im M365-Profil ein Name hinterlegt ist)
     const personalBlock = user.displayName ? `
@@ -102,15 +103,17 @@ function buildSignatureHtml(user) {
 
         <!-- Social Media Icons -->
         <p style="margin: 10px 0 16px 0;">
-            <a href="https://www.facebook.com" target="https://www.facebook.com/vereinigtefinanzkaufleute" style="text-decoration: none; margin-right: 6px;">
+            <a href="https://www.facebook.com/vereinigtefinanzkaufleute" target="_blank" style="text-decoration: none; margin-right: 6px;">
                 <img src="${fbIconUrl}" alt="Facebook" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
-            <a href="https://www.xing.com" target="https://www.xing.com/pages/vereinigtefinanzkaufleuteindeutschlandag" style="text-decoration: none; margin-right: 6px;">
+            <a href="https://www.xing.com/pages/vereinigtefinanzkaufleuteindeutschlandag" target="_blank" style="text-decoration: none; margin-right: 6px;">
                 <img src="${xingIconUrl}" alt="Xing" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
-            <a href="https://www.youtube.com" target="https://www.youtube.com/user/Finanzkaufleute" style="text-decoration: none;">
+            <a href="https://www.youtube.com/user/Finanzkaufleute" target="_blank" style="text-decoration: none;">
                 <img src="${ytIconUrl}" alt="YouTube" width="20" height="20" style="border: 0; vertical-align: middle;" />
             </a>
+            <a href="https://www.instagram.com/vereinigte_finanzkaufleute" target="_blank" style="text-decoration: none; margin-right: 6px;">
+                <img src="${igIconUrl}" alt="Intagram" width="20" height="20" style="border: 0; vertical-align: middle;" />
         </p>
 
         <!-- Pflichtangaben & Rechtstexte -->
