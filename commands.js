@@ -64,7 +64,6 @@ function setSignature(html, event) {
 }
 
 function buildSignatureHtml(user) {
-    // HIER BITTE DIE BILD-URLS AUS EURER WORDPRESS-MEDIATHEK EINTRAGEN:
     const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/vfag_logo.png";
     const fbIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/facebook.png";
     const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/xing.png";
@@ -114,6 +113,7 @@ function buildSignatureHtml(user) {
             </a>
             <a href="https://www.instagram.com/vereinigte_finanzkaufleute" target="_blank" style="text-decoration: none; margin-right: 6px;">
                 <img src="${igIconUrl}" alt="Intagram" width="20" height="20" style="border: 0; vertical-align: middle;" />
+            </a>
         </p>
 
         <!-- Pflichtangaben & Rechtstexte -->
