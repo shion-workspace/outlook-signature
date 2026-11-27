@@ -69,6 +69,7 @@ function buildSignatureHtml(user) {
     const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/xing.png";
     const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/youtube.png";
     const igIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2026/11/instagram-e1795691716909.jpg"
+    const bannerUrl = "https://github.com/shion-workspace/outlook-signature/blob/main/partnertag_email_banner.jpg"
 
     // Optionaler persönlicher Block (erscheint nur, wenn im M365-Profil ein Name hinterlegt ist)
     const personalBlock = user.displayName ? `
@@ -93,7 +94,6 @@ function buildSignatureHtml(user) {
 
         <hr style="border: 0; border-top: 1px solid #cccccc; width: 280px; margin: 12px 0; text-align: left;" />
 
-        <!-- Firmenlogo (Wichtig: Mit hellem Hintergrund speichern, damit es im Dark Mode gut lesbar ist!) -->
         <p style="margin: 10px 0;">
             <a href="https://www.finanzkaufleute.de" target="https://www.finanzkaufleute.de" style="text-decoration: none;">
                 <img src="${logoUrl}" alt="Vereinigte Finanzkaufleute in Deutschland AG" style="max-width: 260px; height: auto; border: 0; display: block;" />
@@ -113,6 +113,12 @@ function buildSignatureHtml(user) {
             </a>
             <a href="https://www.instagram.com/vereinigte_finanzkaufleute" target="_blank" style="text-decoration: none; margin-right: 6px;">
                 <img src="${igIconUrl}" alt="Intagram" width="20" height="20" style="border: 0; vertical-align: middle;" />
+            </a>
+        </p>
+
+        <p style="margin: 12px 0 16px 0;">
+            <a href="https://www.finanzkaufleute.de/vfag-partnertag/partnertag-informationen/" target="_blank" style="text-decoration: none">
+                <img src="${bannerUrl}" alt="VFAG Partnertag 2027" style="max-width: 550px; width: 100%; height: auto; border: 0; display: block;"/>
             </a>
         </p>
 
