@@ -64,7 +64,7 @@ function buildSignatureHtml(user) {
 
         <p style="margin: 10px 0;">
             <a href="https://www.finanzkaufleute.de" target="_blank" style="text-decoration: none;">
-                <img src="${logoUrl}" alt="Vereinigte Finanzkaufleute in Deutschland AG" style="max-width: 260px; height: auto; border: 0; display: block;" />
+                <img src="${logoUrl}" alt="VFAG" style="max-width: 260px; height: auto; border: 0; display: block;" />
             </a>
         </p>
 
