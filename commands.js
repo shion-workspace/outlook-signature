@@ -32,7 +32,7 @@ function setSignature(html, event) {
 }
 
 function buildSignatureHtml(user) {
-    const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/vfag_logo.png";
+    const logoUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2016/06/logo.png";
     const fbIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/facebook.png";
     const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/xing.png";
     const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/youtube.png";
