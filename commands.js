@@ -48,9 +48,9 @@ function buildSignatureHtml(user) {
 
     return `
     <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #222222; line-height: 1.45;">
-        <p style="margin: 0 0 12px 0; color: #555555;">-------------------------------------------</p>
-        
         ${personalBlock}
+        
+        <p style="margin: 0 0 12px 0; color: #555555;">-------------------------------------------</p>
 
         <p style="margin: 0 0 8px 0; font-size: 13px;">
             <strong>Vereinigte Finanzkaufleute<br>in Deutschland AG</strong><br>
