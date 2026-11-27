@@ -69,7 +69,7 @@ function buildSignatureHtml(user) {
     const xingIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/xing.png";
     const ytIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2017/06/youtube.png";
     const igIconUrl = "https://www.finanzkaufleute.de/wp-content/uploads/2026/11/instagram-e1795691716909.jpg"
-    const bannerUrl = "https://raw.githubusercontent.com/shion-workspace/outlook-signature/refs/heads/main/partnertag_email_banner.jpg"
+    const bannerUrl = "https://shion-workspace.github.io/outlook-signature/partnertag_email_banner.jpg"
 
     // Optionaler persönlicher Block (erscheint nur, wenn im M365-Profil ein Name hinterlegt ist)
     const personalBlock = user.displayName ? `
