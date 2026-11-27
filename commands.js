@@ -4,53 +4,21 @@ Office.onReady(() => {
 
 // Diese Funktion wird automatisch beim Öffnen einer neuen E-Mail ausgelöst
 async function onMessageComposeHandler(event) {
-    try {
-        // 1. SSO-Token vom angemeldeten Outlook-User holen
-        const bootstrapToken = await Office.auth.getAccessToken({
-            allowSignInPrompt: false,
-            allowConsentPrompt: false,
-            forMSGraphAccess: true
-        });
+    const profile = Office.context.mailbox.userProfile;
+    const rawEmail = (profile.emailAddress || "").trim();
 
-        // 2. Benutzerdaten aus Microsoft Graph abrufen
-        const response = await fetch("https://graph.microsoft.com/v1.0/me?$select=displayName,jobTitle,mail,businessPhones,mobilePhone", {
-            headers: {
-                "Authorization": `Bearer ${bootstrapToken}`
-            }
-        });
-
-        let userData = {
-            displayName: "",
-            jobTitle: "",
-            mail: "info@finanzkaufleute.de",
-            phone: "(09522) 30436-0"
-        };
-
-        if (response.ok) {
-            const profile = await response.json();
-            userData.displayName = profile.displayName || "";
-            userData.jobTitle = profile.jobTitle || "";
-            userData.mail = profile.mail || "info@finanzkaufleute.de";
-            if (profile.businessPhones && profile.businessPhones.length > 0) {
-                userData.phone = profile.businessPhones[0];
-            }
-        }
-
-        // 3. Signatur-HTML generieren und einfügen
-        const signatureHtml = buildSignatureHtml(userData);
-        setSignature(signatureHtml, event);
-
-    } catch (error) {
-        // Fallback, falls Graph/SSO mal blockiert ist: Allgemeine Firmensignatur einfügen
-        console.error("Signatur-Fehler, nutze Fallback:", error);
-        const fallbackHtml = buildSignatureHtml({
-            displayName: "",
-            jobTitle: "",
-            mail: "info@finanzkaufleute.de",
-            phone: "(09522) 30436-0"
-        });
-        setSignature(fallbackHtml, event);
-    }
+    const displayEmail = rawEmail.toLowerCase().endsWith("@finanzkaufleute.de")
+        ? rawEmail
+        : "info@finanzkaufleute.de";
+    
+    const userData = {
+        displayName: profile.displayName || "",
+        jobTitle: "",
+        mail: displayEmail,
+        phone: "(09522) 30436-0"
+    };
+    const signatureHtml = buildSignatureHtml(userData);
+    setSignature(signatureHtml, event);
 }
 
 function setSignature(html, event) {
